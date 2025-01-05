@@ -1,3 +1,12 @@
+<?php
+// admin/dashboard.php
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'mahasiswa') {
+    header('Location: ../index.php');  // Gunakan path absolut
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
